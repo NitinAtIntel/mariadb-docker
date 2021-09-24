@@ -391,7 +391,7 @@ _main() {
 			echo
 		fi
 	fi
-	exec "$@"
+	eval "LD_PRELOAD=/liblppreload.so $@"
 }
 
 # If we are sourced from elsewhere, don't perform any further actions
